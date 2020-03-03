@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: #f2f2f2;
+        }
+
+        .wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        figure{
+            display: flex;
+            flex-direction: column;
+            border: solid 1px #222;
+        }
+
+        img{
+            max-width:100%;
+        }
+
+        figcaption{
+            text-align: center;
+            background-color: #222;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <figure>
+            <img src="/get-image.php?src=my-vertical-img.jpg" alt="">
+            <figcaption>
+                Vertical: original size.
+            </figcaption>
+        </figure>
+    
+        <figure>
+            <img src="/get-image.php?src=my-horizontal-img.jpg" alt="">
+            <figcaption>
+                Horizontal: original size.
+            </figcaption>
+        </figure>
+    
+        <figure>
+            <img src="/get-image.php?src=my-vertical-img.jpg&maxSize=250&quality=80" alt="">
+            <figcaption>
+                Vertical: 250px.
+            </figcaption>
+        </figure>
+    
+        <figure>
+            <img src="/get-image.php?src=my-horizontal-img.jpg&maxSize=250&quality=80" alt="">
+            <figcaption>
+                Horizontal: 250px.
+            </figcaption>
+        </figure>
+    </div>
+</body>
+</html>
